@@ -1,7 +1,7 @@
 function gameObject() {
   const gameStat = {
     home: {
-      teamname: "Brooklyn Nets",
+      teamName: "Brooklyn Nets",
       colors: ["Black", "White"],
       players: {
         "Alan Anderson": {
@@ -57,7 +57,7 @@ function gameObject() {
       },
     },
     away: {
-      teamname: "Charlotte Hornets",
+      teamName: "Charlotte Hornets",
       colors: ["Turquosie", "Purple"],
       players: {
         "Jeff Adrien": {
@@ -113,7 +113,6 @@ function gameObject() {
       },
     },
   };
-
   return gameStat;
 }
 
@@ -126,3 +125,17 @@ function awayTeamName() {
   let object = gameObject();
   return object.home.teamname;
 }
+
+function teamColors(teamName) {
+  let gameStat = gameObject();
+
+  if (gameStat.home.teamName === teamName) {
+    console.log(`${gameStat.home.teamName}: ${gameStat.home.colors}`);
+    return gameStat.home.colors;
+  } else if (gameStat.away.teamName === teamName) {
+    console.log(`${gameStat.away.teamName}: ${gameStat.away.colors}`);
+    return gameStat.away.colors;
+  }
+}
+
+teamColors("Brooklyn Nets");
