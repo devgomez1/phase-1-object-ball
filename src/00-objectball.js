@@ -116,3 +116,13 @@ function gameObject() {
 
   return gameStat;
 }
+
+function homeTeamName() {
+  let object = gameObject();
+  return object.home.teamname;
+}
+
+function awayTeamName() {
+  let object = gameObject();
+  return object.home.teamname;
+}
